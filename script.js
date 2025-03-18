@@ -94,10 +94,10 @@ function getComparisonText(individual, global) {
     const totalTrees = (treesPerPerson * GLOBAL_POPULATION).toLocaleString();
     
     return `
-        <h4>🌳 상쇄 필요 나무 수</h4>
+        <h4>🌳 상쇄에 필요한 나무의 수</h4>
         <p>1인: 연간 ${treesPerPerson}그루 → 전 세계: ${totalTrees}그루</p>
         <div class="earth-fact">
-            ※ 지구 전체 숲 면적: 40억 헥타르 (1헥타르당 1,500그루 심기 가능)
+            ※ 지구 전체 숲 면적: 40억 헥타르 (1헥타르당 1,500그루)
         </div>
     `;
 }
@@ -148,11 +148,11 @@ function updateChart(emissions, projections) {
 
 function showSolutions(mainCategory) {
     const solutions = {
-        electricity: ['태양광 패널 설치', '에너지 효율 높은 가전제품 사용', '사용하지 않는 전기 제품 플러그 뽑기'],
-        car: ['대중교통 이용', '전기차로 전환', '자동차 여럿이 같이 타기'],
-        water: ['물 절약 샤워기 설치', '빨래할 때 물 재활용', '세탁량 30% 줄이기'],
-        food: ['채소 위주 식단', '집에서 직접 음식 만들기', '음식 쓰레기 줄이기']
-    }[mainCategory] || ['에너지 절약', '재활용 실천', '친환경 제품 사용'];
+        electricity: ['태양광 패널 설치하기', '에너지 효율 높은 가전제품 사용하기', '사용하지 않는 전기 제품 플러그 뽑기'],
+        car: ['대중교통 이용하기', '전기차로 전환하기', '자동차 여럿이 같이 타기'],
+        water: ['물 절약 샤워기 설치하기', '빨래할 때 물 재활용하기', '세탁량 30% 줄이기'],
+        food: ['채소 위주 식단 가지기', '집에서 직접 음식 만들기', '음식 쓰레기 줄이기']
+    }[mainCategory] || ['에너지 절약하기', '재활용 실천하기', '친환경 제품 사용하기'];
 
     const solutionsHTML = `
         <div style="margin-top: 20px; background: #ecf0f1; padding: 15px; border-radius: 10px;">
