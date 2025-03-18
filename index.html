@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기후변화 영향 계산기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>나의 생활패턴이 지구에 미치는 영향</h1>
+        
+        <div class="input-group">
+            <label>하루 물 사용량 (리터)</label>
+            <input type="number" id="water" placeholder="예) 300">
+        </div>
+
+        <div class="input-group">
+            <label>하루 전기 사용량 (kWh)</label>
+            <input type="number" id="electricity" placeholder="예) 30">
+        </div>
+
+        <div class="input-group">
+            <label>하루 음식 소비량 (kg)</label>
+            <input type="number" id="food" placeholder="예) 5">
+        </div>
+
+        <div class="input-group">
+            <label>하루 차량 이동 거리 (km)</label>
+            <input type="number" id="car" placeholder="예) 50">
+        </div>
+
+        <button onclick="calculateImpact()">영향 계산하기</button>
+
+        <div id="results" class="result-box"></div>
+        <div class="chart-container">
+            <canvas id="climateChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
